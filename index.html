@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publicidad para Circo</title>
   <style>
+    /* Estilo base */
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -13,49 +14,61 @@
       line-height: 1.6;
     }
 
+    /* Header */
     header {
       text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 2px solid #e50914;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #e50914, #b20710);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
     }
 
     header img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin: 0;
-      color: #e50914;
+      font-weight: 800;
     }
 
     header p {
-      font-size: 1.1rem;
-      color: #444;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
+    /* Secciones */
     section {
-      padding: 2.5rem 1.5rem;
-      max-width: 900px;
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
       color: #e50914;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
       text-align: center;
+      font-weight: 700;
     }
 
     .card {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      background: #fff;
+      border-radius: 18px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .highlight {
@@ -66,50 +79,74 @@
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 0.6rem 0;
+      font-size: 1.05rem;
     }
 
     ul li::before {
       content: "✔ ";
       color: #e50914;
+      font-weight: bold;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      background: #e50914;
-      color: #fff;
-      margin-top: 2rem;
-    }
-
+    /* Botón CTA */
     .cta {
       display: inline-block;
       background: #e50914;
       color: #fff;
       font-weight: bold;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
+      padding: 1rem 2rem;
+      border-radius: 40px;
       text-decoration: none;
-      transition: 0.3s;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 20px rgba(229, 9, 20, 0.4);
+      transition: all 0.3s ease;
     }
 
     .cta:hover {
       background: #b20710;
+      box-shadow: 0 5px 25px rgba(229, 9, 20, 0.6);
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      background: #f8f8f8;
+      color: #444;
+      border-top: 1px solid #eee;
+    }
+
+    /* Animaciones */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Logo circular PNG -->
     <img src="logo.png" alt="Publicidad para Circo Logo">
     <h1>Publicidad para Circo</h1>
     <p>Agencia moderna de captación y conversión</p>
   </header>
 
   <section>
-    <h2>🎯 Objetivo</h2>
-    <div class="card">
+    <h2 data-animate>🎯 Objetivo</h2>
+    <div class="card" data-animate>
       <p>Brindamos una <span class="highlight">solución integral</span> garantizando:</p>
       <ul>
         <li>Alta rentabilidad</li>
@@ -118,8 +155,8 @@
       </ul>
     </div>
 
-    <h2>📈 Inversión y Rendimiento</h2>
-    <div class="card">
+    <h2 data-animate>📈 Inversión y Rendimiento</h2>
+    <div class="card" data-animate>
       <p><strong>Inversión mínima diaria:</strong> USD 500</p>
       <ul>
         <li>~218 mensajes diarios</li>
@@ -128,8 +165,8 @@
       </ul>
     </div>
 
-    <h2>⚡ Soluciones Incluidas</h2>
-    <div class="card">
+    <h2 data-animate>⚡ Soluciones Incluidas</h2>
+    <div class="card" data-animate>
       <ul>
         <li>Reportes diarios en Excel</li>
         <li>Publicidad anti-caída de WhatsApp</li>
@@ -137,8 +174,8 @@
       </ul>
     </div>
 
-    <h2>🌍 Ventajas Competitivas</h2>
-    <div class="card">
+    <h2 data-animate>🌍 Ventajas Competitivas</h2>
+    <div class="card" data-animate>
       <ul>
         <li>Costo por jugador optimizado</li>
         <li>Seguridad blindada</li>
@@ -147,7 +184,7 @@
       </ul>
     </div>
 
-    <div style="text-align:center; margin-top:2rem;">
+    <div style="text-align:center; margin-top:3rem;" data-animate>
       <a href="https://wa.me/5491112345678" class="cta">Hablar con un asesor</a>
     </div>
   </section>
@@ -156,5 +193,18 @@
     © 2025 Publicidad para Circo. Todos los derechos reservados.
   </footer>
 
+  <script>
+    // Animación al hacer scroll
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
