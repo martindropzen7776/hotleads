@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publicidad para Circo</title>
   <style>
-    /* Estilo base */
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -14,14 +13,11 @@
       line-height: 1.6;
     }
 
-    /* Header */
+    /* HEADER */
     header {
       text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(135deg, #e50914, #b20710);
-      color: #fff;
-      position: relative;
-      overflow: hidden;
+      padding: 3rem 1rem 2rem;
+      background: #fff;
     }
 
     header img {
@@ -29,21 +25,23 @@
       height: 130px;
       border-radius: 50%;
       margin-bottom: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     header h1 {
       font-size: 2.5rem;
       margin: 0;
       font-weight: 800;
+      background: linear-gradient(90deg, #e50914, #ff4d4d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     header p {
       font-size: 1.2rem;
-      opacity: 0.9;
+      color: #444;
     }
 
-    /* Secciones */
+    /* SECCIONES */
     section {
       padding: 3rem 1.5rem;
       max-width: 1000px;
@@ -51,11 +49,13 @@
     }
 
     h2 {
-      color: #e50914;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
       text-align: center;
       font-weight: 700;
+      background: linear-gradient(90deg, #e50914, #ff4d4d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .card {
@@ -64,15 +64,21 @@
       padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border: 2px solid transparent;
+      background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #e50914, #ff4d4d);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
       transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .highlight {
-      color: #e50914;
+      background: linear-gradient(90deg, #e50914, #ff4d4d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: 700;
     }
 
@@ -89,31 +95,32 @@
 
     ul li::before {
       content: "✔ ";
-      color: #e50914;
+      background: linear-gradient(90deg, #e50914, #ff4d4d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: bold;
     }
 
-    /* Botón CTA */
+    /* BOTÓN CTA */
     .cta {
       display: inline-block;
-      background: #e50914;
+      background: linear-gradient(90deg, #e50914, #ff4d4d);
       color: #fff;
       font-weight: bold;
       padding: 1rem 2rem;
-      border-radius: 40px;
+      border-radius: 50px;
       text-decoration: none;
       font-size: 1.1rem;
-      box-shadow: 0 5px 20px rgba(229, 9, 20, 0.4);
+      box-shadow: 0 5px 20px rgba(229, 9, 20, 0.3);
       transition: all 0.3s ease;
     }
 
     .cta:hover {
-      background: #b20710;
-      box-shadow: 0 5px 25px rgba(229, 9, 20, 0.6);
+      box-shadow: 0 5px 25px rgba(229, 9, 20, 0.5);
       transform: translateY(-3px);
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 2rem;
@@ -123,7 +130,7 @@
       border-top: 1px solid #eee;
     }
 
-    /* Animaciones */
+    /* ANIMACIONES */
     [data-animate] {
       opacity: 0;
       transform: translateY(20px);
